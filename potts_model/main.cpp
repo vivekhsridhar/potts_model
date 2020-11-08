@@ -180,7 +180,7 @@ void Graphics()
     }
     
     // Display timestep number & cue counter on screen
-    putText(visualisation, std::to_string(timestep_number), cvPoint(10,30), FONT_HERSHEY_COMPLEX_SMALL, 0.8, cvScalar(200,200,250), 1, CV_AA);
+    putText(visualisation, std::to_string(timestep_number), Point(10,30), FONT_HERSHEY_COMPLEX_SMALL, 0.8, Scalar(200,200,250), 1, LINE_AA);
     
     imshow("ising_model", visualisation);
     waitKey(1);
@@ -202,7 +202,7 @@ void GraphicsWriter(VideoWriter& video_writer, int& timestep_number, const int& 
     }
     
     // Display timestep number & cue counter on screen
-    putText(visualisation, std::to_string(timestep_number), Point(10, 30), FONT_HERSHEY_COMPLEX_SMALL, 0.8, Scalar(200, 200, 250), 1, CV_AA);
+    putText(visualisation, std::to_string(timestep_number), Point(10, 30), FONT_HERSHEY_COMPLEX_SMALL, 0.8, Scalar(200, 200, 250), 1, LINE_AA);
     
     // Write video
     video_writer.write(visualisation); //writer the frame into the file
